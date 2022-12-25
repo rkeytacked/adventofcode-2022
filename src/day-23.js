@@ -71,7 +71,7 @@ function spread(elves, rounds = undefined) {
             }
         }
         if (rounds === undefined && !Object.keys(targets).length) {
-            rounds = i+1;
+            rounds = i + 1;
             break;
         }
         for (let elf of elves) {

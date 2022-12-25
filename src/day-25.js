@@ -1,5 +1,19 @@
 #!/usr/bin/env node
-const {log, associate, readCharArrays, readLines, readSingletonMaps, split, sum, toNumber, min, max, sort, prod, median} = require("./common");
+const {
+    log,
+    associate,
+    readCharArrays,
+    readLines,
+    readSingletonMaps,
+    split,
+    sum,
+    toNumber,
+    min,
+    max,
+    sort,
+    prod,
+    median
+} = require("./common");
 
 /* * * * * * * *
  * * DAY  25 * *
@@ -21,7 +35,7 @@ const snafu = {
 function parseSnafu(nr) {
     let value = 0;
     for (let char of nr) {
-        value = 5*value + snafu[char];
+        value = 5 * value + snafu[char];
     }
     return value;
 }
@@ -36,15 +50,15 @@ function toSnafu(nr) {
             case 1:
             case 2:
                 string = remainder + string;
-                nr = (nr-remainder) / 5;
+                nr = (nr - remainder) / 5;
                 break;
             case 3:
                 string = "=" + string;
-                nr = (nr+2) / 5;
+                nr = (nr + 2) / 5;
                 break;
             case 4:
                 string = "-" + string;
-                nr = (nr+1) / 5;
+                nr = (nr + 1) / 5;
                 break;
         }
     }

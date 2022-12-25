@@ -35,7 +35,7 @@ for (let x = 0; x < sizeX; x++) {
 for (let y = 0; y < sizeY; y++) {
     let maxTreeRight = -1;
     let maxTreeLeft = -1;
-    for (let x = 0, _x = sizeX-1; x < sizeX; x++, _x--) {
+    for (let x = 0, _x = sizeX - 1; x < sizeX; x++, _x--) {
         if (input[y][x] > maxTreeRight) {
             maxTreeRight = input[y][x];
             visible[y][x] = 1;

@@ -54,7 +54,7 @@ function findCommon3(rucksack1, rucksack2, rucksack3) {
 
 const groups = [];
 for (let i = 0; i < lines.length; i += 3) {
-    groups.push(findCommon3(lines[i], lines[i+1], lines[i+2]))
+    groups.push(findCommon3(lines[i], lines[i + 1], lines[i + 2]))
 }
 
 log('solution #2', sum(groups.map(toPrio)));

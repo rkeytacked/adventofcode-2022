@@ -105,7 +105,7 @@ function simulateUntil(until) {
             rock = null;
             rockIndex++;
             if (res) {
-                let [p1,p2] = period;
+                let [p1, p2] = period;
                 let rest = until - rockIndex;
                 let periodLength = p2.rockIndex - p1.rockIndex;
                 let insertPeriodCount = Math.floor(rest / periodLength);

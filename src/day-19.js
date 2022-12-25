@@ -76,14 +76,14 @@ function findBestGeodes(robotCosts, time) {
         }
     }
 
-    findRecursively(0,1,0,0,0,0,0,0,time,[]);
+    findRecursively(0, 1, 0, 0, 0, 0, 0, 0, time, []);
     return best;
 }
 
 
 let sumLevels = 0;
 for (let blueprint of input) {
-    let [[id],[ore2Ore],[ore2Clay],[ore2Obsidian,clay2Obsidian],[ore2geode,obsidian2geode]] =
+    let [[id], [ore2Ore], [ore2Clay], [ore2Obsidian, clay2Obsidian], [ore2geode, obsidian2geode]] =
         blueprint.map(line => line && line.match(/\d+/g).map(toNumber));
     let result = findBestGeodes({
         ore: {ore: ore2Ore},
@@ -103,8 +103,8 @@ log('\n-----------------------------------------------------------\n')
  * * Part #2 * *
  * * * * * * * */
 
-let firstThree = input.slice(0,3).map(blueprint => {
-    let [,[ore2Ore],[ore2Clay],[ore2Obsidian,clay2Obsidian],[ore2geode,obsidian2geode]] =
+let firstThree = input.slice(0, 3).map(blueprint => {
+    let [, [ore2Ore], [ore2Clay], [ore2Obsidian, clay2Obsidian], [ore2geode, obsidian2geode]] =
         blueprint.map(line => line && line.match(/\d+/g).map(toNumber));
     return findBestGeodes({
         ore: {ore: ore2Ore},

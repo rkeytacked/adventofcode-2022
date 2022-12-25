@@ -72,7 +72,7 @@ function findLeftMostAir() {
 }
 
 let border = new Set();
-for(const toVisit = [findLeftMostAir()]; toVisit.length;) {
+for (const toVisit = [findLeftMostAir()]; toVisit.length;) {
     forNeighbors(toVisit.pop(), DIRECT6, p => {
         if (airFields.has(p) && !border.has(p)) {
             border.add(p);

@@ -36,19 +36,19 @@ function walk(start, goal) {
         for (const B of blizzards) {
             B.x = (B.x + width + B.dx) % width;
             B.y = (B.y + height + B.dy) % height;
-            nextOccupied.add(B.x+':'+B.y);
+            nextOccupied.add(B.x + ':' + B.y);
         }
         let nextPositions = [start];
         let nextGoneTo = new Set();
 
         function goTo(x, y) {
-            if (nextGoneTo.has(x+':'+y)) return;
+            if (nextGoneTo.has(x + ':' + y)) return;
             if (x === goal.x && y === goal.y) {
                 return true;
             }
-            if (x >= 0 && x < width && y >= 0 && y < height && !nextOccupied.has(x+':'+y)) {
+            if (x >= 0 && x < width && y >= 0 && y < height && !nextOccupied.has(x + ':' + y)) {
                 nextPositions.push({x, y});
-                nextGoneTo.add(x+':'+y);
+                nextGoneTo.add(x + ':' + y);
             }
         }
 
