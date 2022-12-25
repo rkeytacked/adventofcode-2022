@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const {log, min, readLines, split} = require("./common");
+const {log, min, readCharArrays} = require("./common");
 
 /* * * * * * * *
  * * DAY  12 * *
  * * * * * * * */
-let input = readLines('../inputs/12.txt', split(''));
+let input = readCharArrays('../inputs/12.txt');
 
 let height = input.length;
 let width = input[0].length;

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const {log, readLines, split} = require("./common");
+const {log, readCharArrays} = require("./common");
 
 /* * * * * * * *
  * * DAY  24 * *
  * * * * * * * */
 
-const input = readLines('../inputs/24.txt', split(''));
+const input = readCharArrays('../inputs/24.txt');
 let height = input.length - 2;
 let width = input[0].length - 2;
 

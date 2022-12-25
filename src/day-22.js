@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const {log, readLines, split} = require("./common");
+const {log, readCharArrays} = require("./common");
 
 /* * * * * * * *
  * * DAY  22 * *
  * * * * * * * */
 
-const input = readLines('../inputs/22.txt', split(''));
+const input = readCharArrays('../inputs/22.txt');
 let instruction = input.pop();
 
 

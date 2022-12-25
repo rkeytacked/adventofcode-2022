@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const {log, readLines, split, min, max} = require("./common");
+const {log, min, max, readCharArrays} = require("./common");
 
 /* * * * * * * *
  * * DAY  23 * *
  * * * * * * * */
 
-const input = readLines('../inputs/23.txt', split(''));
+const input = readCharArrays('../inputs/23.txt');
 
 function mapToElves() {
     return input.flatMap((line, y) => line.map((field, x) => field === '#' && {x, y}).filter(x => x));

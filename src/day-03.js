@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-const {log, readLines, split, sum} = require("./common");
+const {log, sum, readCharArrays} = require("./common");
 
 /* * * * * * * *
  * * DAY  03 * *
  * * * * * * * */
 
-let lines = readLines('../inputs/03.txt', split(''));
+let lines = readCharArrays('../inputs/03.txt');
 
 /* * * * * * * *
  * * Part #1 * *
